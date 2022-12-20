@@ -13,7 +13,7 @@ img {
 :root {
 	--primary-text-color: #434455;
 	--title-text-color: #2e2f42;
-	--accent-color: #4d5ae5;
+	--accent-color: #404bbf;
 	--primary-bg-color: #2e2f42;
 	--primary-white-color: #ffffff;
 	--footer-brand-color: #f4f4fd;
@@ -109,11 +109,14 @@ h3 {
 	text-decoration: none;
 	padding-top: 24px;
 	padding-bottom: 24px;
-	transition: color var(--animation);
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	/* transition: color var(--animation); */
 }
 
 .accent {
-	color: var(--accent-color);
+	color: #4D5AE5;
 }
 
 .logo:hover,
@@ -138,10 +141,6 @@ h3 {
 	margin-left: 40px;
 }
 
-.item {
-	transition: color var(--animation);
-}
-
 .site-nav .link {
 	display: block;
 	position: relative;
@@ -152,11 +151,13 @@ h3 {
 	text-decoration: none;
 	padding-top: 24px;
 	padding-bottom: 24px;
+	transition: color var(--animation);
 }
+
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-	color: var(--primary-text-color);
+	color: var(--accent-color);
 }
 
 .site-nav .link:active {
@@ -168,6 +169,7 @@ h3 {
 	text-decoration: none;
 	padding-top: 24px;
 	padding-bottom: 24px;
+	transition: color var(--animation);
 }
 
 .auth-nav .auth:hover,
@@ -201,7 +203,6 @@ h3 {
 	padding-top: 192px;
 	padding-bottom: 192px;
 	position: relative;
-	transition: color var(--animation), background-color var(--animation);
 }
 
 .hero-title {
@@ -218,8 +219,8 @@ h3 {
 
 .button-hero {
 	color: var(--primary-white-color);
-	background-color: var(--accent-color);
-	border-color: var(--accent-color);
+	background-color: #4d5ae5;
+	border-color: #4d5ae5;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 1.18;
@@ -229,6 +230,7 @@ h3 {
 	cursor: pointer;
 	padding: 16px 32px;
 	border-radius: 4px;
+	transition: color var(--animation), background-color var(--animation);
 }
 
 .button-hero:active .button-hero:focus,
@@ -390,12 +392,18 @@ h3 {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
+	transition: background-color var(--animation);
+}
+
+.ico-a:hover,
+.ico-a:focus {
+	background-color: var(--accent-color);
 }
 
 .activ > li {
 	width: 40px;
 	height: 40px;
-	background-color: var(--accent-color);
+	background-color: #4d5ae5;
 	border-radius: 50%;
 }
 
@@ -431,12 +439,14 @@ button {
 	color: var(--primary-white-color);
 	background-color: var(--accent-color);
 	border-color: var(--accent-color);
+	transition: color var(--animation), background-color var(--animation);
 }
 
 .button.secondary {
 	color: var(--accent-color);
 	background-color: var(--footer-brand-color);
 	border: 1px solid var(--footer-color);
+	transition: color var(--animation), background-color var(--animation);
 }
 
 .button.primary:focus,
@@ -462,7 +472,6 @@ button {
 .partner {
 	width: 168px;
 	height: 88px;
-	transition: color var(--animation);
 }
 
 .partner > a {
@@ -474,6 +483,7 @@ button {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	transition: color var(--animation), border var(--animation);
 }
 
 .partner > a:hover,
@@ -489,6 +499,7 @@ button {
 
 .svg-partner {
 	fill: currentColor;
+	transition: color var(--animation);
 }
 
 .svg-partner:focus,
@@ -564,6 +575,9 @@ button {
 .footer-ico {
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
+}
+
+.footer-ico a {
 	transition: background-color var(--animation);
 }
 
@@ -595,7 +609,6 @@ button {
 
 .filter > li {
 	min-width: 48px;
-	transition: color var(--animation), background-color var(--animation);
 }
 
 .box {
@@ -687,6 +700,7 @@ button {
 
 .iten {
 	display: block;
+	transition: box-shadow var(--animation);
 }
 
 .iten:hover,
@@ -740,9 +754,12 @@ button {
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: var(--footer-color);
+	cursor: pointer;
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: #404bbf;
+	fill: var(--primary-white-color);
 }
